@@ -1,0 +1,50 @@
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+.col {
+  flex: 0 0 33.3333333333%;
+  padding: 1em;
+  margin: 100px;
+}
+
+.gambar {
+  display: block;
+  max-width: 450px;
+  width: 400px;
+  max-height: 350px;
+  height: 300px;
+}
+
+h2 {
+  font: bold;
+}
+
+body {
+  font: normal 16px/1.4 "Lato", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.25s;
+}
+
+@media(max-width: 870px) {
+  .col {
+    text-align: center;
+    margin: 0;
+    width: 200px;
+    flex: 0 0 50%;
+  }
+}
+@media(max-width: 580px) {
+  .col {
+    text-align: center;
+    margin: 0;
+    width: 200px;
+    flex: 0 0 100%;
+  }
+}

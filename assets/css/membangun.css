@@ -1,0 +1,97 @@
+html {
+  height: 100%;
+}
+#membangun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  height: 100%;
+}
+.snip1523 {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 3%;
+  min-width: 230px;
+  max-width: 350px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  background-color: #1A1A1A;
+}
+
+.snip1523 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1523 img {
+  width: 350px;
+  height: 300px;
+  backface-visibility: hidden;
+}
+
+.snip1523 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 30px;
+  background-color: #202123;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.snip1523 h3,
+.snip1523 p {
+  margin: 0;
+}
+
+.snip1523 h3 {
+  font-family: 'Slabo 27px', serif;
+  line-height: 1.2em;
+}
+
+.snip1523 h3 {
+  color: #EBEBEB;
+  font-size: 1.3em;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.snip1523 p {
+  margin-top: -12px;
+  font-size: 0.9em;
+  padding: 12px 0 15px;
+  line-height: 1.5em;
+}
+
+.snip1523 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1523:hover > img,
+.snip1523.hover > img {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.snip1523:hover figcaption,
+.snip1523.hover figcaption {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
