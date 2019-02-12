@@ -58,16 +58,16 @@
 		  <!-- form -->
 
       <form class="" action="<?=base_url()?>home/update_membangun" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?=$membangun->id_membangun;?>">
+        <input type="hidden" name="id_membangun" value="<?=$membangun->id_membangun;?>">
 
         <div class="form-group">
-          <label for="kategori">Kateogri</label>
-          <input type="text" name="kategori" class="form-control" id="kategori" placeholder="kategori" value="<?=$membangun->m_kategori?>">
+          <label for="m_kategori">Kateogri</label>
+          <input type="text" name="m_kategori" class="form-control" id="m_kategori" placeholder="kategori" value="<?=$membangun->m_kategori?>">
         </div>
 
         <div class="form-group">
-          <label for="gambar">Gambar</label>
-          <input type="text" name="gambar" class="form-control" id="gambar" placeholder="gambar" value="<?=$membangun->img_membangun?>">
+          <label for="img_membangun">Gambar</label>
+          <input type="text" name="img_membangun" class="form-control" id="img_membangun" placeholder="gambar" value="<?=$membangun->img_membangun?>">
         </div>
 
         <button type="submit" class="btn btn-default">Submit</button>

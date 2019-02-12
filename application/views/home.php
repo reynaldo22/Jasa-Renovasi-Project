@@ -242,7 +242,7 @@
 												<?php foreach($rumah as $r) { ?>
 												<div class="iso-box rumah col-md-4 col-sm-6 col-xs-12">
 													<div class="portfolio-thumb">
-														<img src="<?=base_url() . "assets/membangun/rumah/" . $r->foto ?>" class="fluid-img">
+														<img data-src="<?=base_url() . "assets/membangun/rumah/" . $r->foto ?>" class="fluid-img lazy">
 															<div class="portfolio-overlay">
 																<h4><?=$r->judul?></h4>
 																<p><?=$r->deskripsi?></p>
@@ -254,7 +254,7 @@
 											<?php foreach($ruko as $ru) { ?>
 												<div class="iso-box ruko col-md-4 col-sm-6 col-xs-12">
 													<div class="portfolio-thumb">
-														<img src="<?=base_url() . "assets/membangun/ruko/" . $ru->foto ?>" class="fluid-img">
+														<img data-src="<?=base_url() . "assets/membangun/ruko/" . $ru->foto ?>" class="fluid-img lazy">
 															<div class="portfolio-overlay">
 																<h4><?=$ru->judul?></h4>
 																<p><?=$ru->deskripsi?></p>
@@ -266,7 +266,7 @@
 											<?php foreach($interior as $i) { ?>
 												<div class="iso-box interior col-md-4 col-sm-6 col-xs-12">
 													<div class="portfolio-thumb">
-														<img src="<?=base_url() . "assets/furniture/portfolio/" . $i->foto ?>" class="fluid-img">
+														<img data-src="<?=base_url() . "assets/furniture/portfolio/" . $i->foto ?>" class="fluid-img lazy">
 															<div class="portfolio-overlay">
 																<h4><?=$ru->judul?></h4>
 																<p><?=$ru->deskripsi?></p>
@@ -364,6 +364,35 @@
 <script src="<?=base_url()?>assets/js/wow.min.js"></script>
 <script src="<?=base_url()?>assets/js/counter.js"></script>
 <script src="<?=base_url()?>assets/js/custom.js"></script>
+<script src="<?=base_url()?>assets/js/lazyload.min.js"></script>
+
+<script>
+	(function () {
+		function logElementEvent(eventName, element) {
+			console.log(Date.now(), eventName, element.getAttribute("data-src"));
+		}
+
+		ll = new LazyLoad({
+			elements_selector: '.lazy',
+			load_delay: 300,
+			threshold: 0,
+
+			callback_enter: function (element) {
+				logElementEvent("ENTERED", element);
+			},
+			callback_load: function (element) {
+				logElementEvent("LOADED", element);
+			},
+			callback_set: function (element) {
+				logElementEvent("SET", element);
+			},
+			callback_error: function (element) {
+				logElementEvent("ERROR", element);
+				element.src = "https://placeholdit.imgix.net/~text?txtsize=21&txt=Fallback%20image&w=220&h=280";
+			}
+		});
+	}());
+</script>
 
 </body>
 </html>
