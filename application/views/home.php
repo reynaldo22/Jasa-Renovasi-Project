@@ -26,8 +26,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
-				<h1 class="wow fadeInDown">JASA RENOV</h1>
-				<h3 class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+				<h1 style="color:#fff;" class="wow fadeInDown">JASA RENOV</h1>
 			</div>
 
 		</div>

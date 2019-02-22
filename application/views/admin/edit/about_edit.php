@@ -82,7 +82,7 @@
 
         <div class="form-group">
           <label for="caption2">Caption 2</label>
-          <textarea class="form-control" name="caption2" id="caption" placeholder="Caption 2"><?=$about->caption2?></textarea>
+          <textarea class="form-control" name="caption2" id="caption2" placeholder="Caption 2"><?=$about->caption2?></textarea>
         </div>
 
         <div class="form-group">
@@ -91,6 +91,9 @@
         </div>
 
         <button type="submit" class="btn btn-default">Submit</button>
+        <br>
+        <br>
+        <br>
       </form>
 
 			<!--/sidebar-menu-->
@@ -137,6 +140,27 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
    <script src="<?=base_url()?>assets/admin/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>assets/js/ckeditor.js"></script>
+<script>
+     ClassicEditor
+       .create( document.querySelector( '#caption2' ) )
+       .then( editor => {
+         console.log( editor );
+       } )
+       .catch( error => {
+         console.error( error );
+       } );
+</script>
+<script>
+     ClassicEditor
+       .create( document.querySelector( '#caption' ) )
+       .then( editor => {
+         console.log( editor );
+       } )
+       .catch( error => {
+         console.error( error );
+       } );
+</script>
 
 </body>
 </html>
