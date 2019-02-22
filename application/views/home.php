@@ -72,7 +72,7 @@
 		<div class="row">
 
 			<div class="col-md-6 col-sm-12">
-				<img src="<?=base_url() . "assets/images/" . $a->foto ?>" class="img-responsive">
+				<img src="<?=base_url() . "assets/" . $a->foto ?>" class="img-responsive">
 			</div>
 
 			<div class="col-md-6 col-sm-12">
@@ -94,7 +94,7 @@
 			</div>
 
             <div class="col-md-6 col-sm-12">
-				<img src="<?=base_url() . "assets/images/" . $a->foto2 ?>" class="img-responsive">
+				<img src="<?=base_url() . "assets/" . $a->foto2 ?>" class="img-responsive">
 			</div>
 
 		</div>
